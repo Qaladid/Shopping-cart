@@ -2,7 +2,7 @@ let shop = document.getElementById("shop");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-let genetateShop = () => {
+let generateShop = () => {
   return (shop.innerHTML = shopItemsData
     .map((x) => {
       let { id, name, price, descrp, img } = x;
@@ -29,7 +29,7 @@ let genetateShop = () => {
     })
     .join(""));
 };
-genetateShop();
+generateShop();
 
 let increment = (id) => {
   let selectedItem = id;
